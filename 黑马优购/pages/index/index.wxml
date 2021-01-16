@@ -1,0 +1,48 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="top_input">
+    <input class="top_search_input" type="text" placeholder="搜索" />
+  </view>
+
+  <!-- 轮播图 -->
+  <view class="page_swiper">
+    <swiper circular='true' interval='3000' autoplay='true' indicator-dots='true'>
+      <swiper-item wx:for="{{imageList}}" wx:key='item' wx:for-item='item' wx:for-index='index'>
+        <navigator>
+          <image mode="aspectFill" src="{{item}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 分类 -->
+  <view class="classify">
+    <view class="classify_box" wx:for="{{textList}}" wx:key='item' wx:for-item='item' wx:for-index='index'>
+      <image mode='aspectFill' src="{{item.image_src}}"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+
+  <!-- 层楼数据 -->
+  <view class="floor">
+    <view class="floorBox" wx:for="{{floortop}}" wx:key='index'>
+      <view class="floor_title">
+        <image src="{{item.floor_title.image_src}}"></image>
+      </view>
+      <view class="floor_bottom">
+        <view class="floor_bottom_left">
+          <image mode='heightFix' src="{{item.product_list[0].image_src}}"></image>
+        </view>
+
+        <view class="floor_bottom_right">
+          <block wx:for="{{item.product_list}}" wx:key='index'>
+            <navigator url="{{item.navigator_url}}">
+              <image mode='widthFix' wx:if="{{index!=0}}" src="{{item.image_src}}"></image>
+            </navigator>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,101 @@
+/**index.wxss**/
+.top_input {
+  position: fixed;
+  top: 0;
+  background-color: #c00000;
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 100;
+}
+
+.top_search_input {
+  background: #fff;
+  height: 36px;
+  color: #000000 !important;
+  border-radius: 25px;
+  margin-top:5px
+}
+
+/* 轮播图 */
+.page_swiper{
+  width: 100%;
+  height: 165px;
+  margin-top: 50px;
+}
+.page_swiper  swiper{
+height: 100%;
+}
+
+.page_swiper image{
+  width: 100%;
+  height: 165px;
+}
+
+/* 分类 */
+.classify{
+  display: flex;
+  height: 100px;
+  justify-content:space-around;
+  align-items:center;
+  margin-bottom: 10px;
+}
+.classify_box image{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+}
+.classify_box{
+  text-align: center;
+}
+
+.classify_box text{
+  font-size: 12px;
+}
+
+/* 层楼 */
+.floor{
+padding:0 8px;
+}
+
+.floor_title{
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.floor_title image{
+  height: 100%;
+}
+
+.floor_bottom{
+  display: flex;
+  justify-content:space-between
+}
+
+.floor_bottom_left{
+  flex: 1;
+  width: 30%;
+}
+
+.floor_bottom_left image{
+height: 190px;
+}
+
+.floor_bottom_right{
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  flex: 2;
+}
+
+.floor_bottom_right block{
+  width:50px
+}
+
+.floor_bottom_right image{
+width: 116px;
+margin-bottom: 8rpx;
+}
