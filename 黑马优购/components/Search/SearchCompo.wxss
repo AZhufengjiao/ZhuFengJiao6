@@ -1,0 +1,20 @@
+/* components/Search/SearchCompo.wxss */
+.top_input {
+  position: fixed;
+  top: 0;
+  background-color: var(--themaColor);
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 100;
+}
+
+.top_search_input {
+  background: #fff;
+  height: 36px;
+  color: #000000 !important;
+  border-radius: 25px;
+  margin-top:5px
+}

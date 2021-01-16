@@ -1,11 +1,33 @@
 <!--pages/cates/cates.wxml-->
 <view class="container">
   <!-- 搜索框 -->
-  <view class="top_input">
-    <input class="top_search_input" type="text" placeholder="搜索" />
-  </view>
+  <Sreach></Sreach>
 
-  <view class="brand">
-   
+  <!-- 分类列表 -->
+  <view class="cate_list">
+    <scroll-view class="care_list_left" scroll-y="true" style="height:{{height}}rpx;">
+      <view class="{{index==currentIndex?'active':''}}" bindtap="handleCateClick" wx:for-index='index'
+        data-index='{{index}}' wx:for="{{cateLeftData}}" wx:key='cat_id'>
+        {{item.cat_name}}
+      </view>
+    </scroll-view>
+
+    <scroll-view class="care_list_right" scroll-y="true">
+      <view wx:for="{{cateRightData}}" wx:key='cat_id'>
+        <view class="care_list_right_title">
+          /
+          <text> {{item.cat_name}}</text>
+          /
+        </view>
+
+        <view class="care_list_right_list">
+          <view class="care_list_right_list_box" wx:for="{{item.children}}" wx:key='cat_id'>
+            <image src="{{item.cat_icon}}"></image>
+            <view>{{item.cat_name}}</view>
+          </view>
+        </view>
+
+      </view>
+    </scroll-view>
   </view>
 </view>

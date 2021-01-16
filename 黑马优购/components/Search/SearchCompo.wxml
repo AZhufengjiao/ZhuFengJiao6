@@ -1,0 +1,6 @@
+<!--components/Search/SearchCompo.wxml-->
+  <!-- 搜索框 -->
+  <view class="top_input">
+    <text class="iconfont icon-fangdajing"></text>
+    <input class="top_search_input" type="text" placeholder="搜索" />
+  </view>

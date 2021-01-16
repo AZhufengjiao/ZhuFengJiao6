@@ -1,9 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <!-- 搜索框 -->
-  <view class="top_input">
-    <input class="top_search_input" type="text" placeholder="搜索" />
-  </view>
+ <Sreach></Sreach>
 
   <!-- 轮播图 -->
   <view class="page_swiper">
