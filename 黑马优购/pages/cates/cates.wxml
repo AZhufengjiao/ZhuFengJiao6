@@ -13,7 +13,7 @@
     </scroll-view>
 
     <scroll-view class="care_list_right" scroll-y="true">
-      <view wx:for="{{cateRightData}}" wx:key='cat_id'>
+      <view wx:for="{{cateRightData}}" wx:for-item='item' wx:key='cat_id'>
         <view class="care_list_right_title">
           /
           <text> {{item.cat_name}}</text>
@@ -21,10 +21,12 @@
         </view>
 
         <view class="care_list_right_list">
-          <view class="care_list_right_list_box" wx:for="{{item.children}}" wx:key='cat_id'>
-            <image src="{{item.cat_icon}}"></image>
-            <view>{{item.cat_name}}</view>
-          </view>
+          <navigator url="/pages/goods_list/index?cid={{item1.cat_id}}" 
+          class="care_list_right_list_box"
+            wx:for="{{item.children}}" wx:for-item='item1' wx:key='cat_id'>
+            <image src="{{item1.cat_icon}}"></image>
+            <view>{{item1.cat_name}}</view>
+          </navigator>
         </view>
 
       </view>

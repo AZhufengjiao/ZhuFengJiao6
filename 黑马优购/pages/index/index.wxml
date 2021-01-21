@@ -7,7 +7,7 @@
   <view class="page_swiper">
     <swiper circular='true' interval='3000' autoplay='true' indicator-dots='true'>
       <swiper-item wx:for="{{imageList}}" wx:key='item' wx:for-item='item' wx:for-index='index'>
-        <navigator>
+        <navigator url="">
           <image mode="aspectFill" src="{{item}}"></image>
         </navigator>
       </swiper-item>

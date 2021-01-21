@@ -16,6 +16,7 @@ Page({
       url: 'https://www.uinav.com/api/public/v1/home/swiperdata',
       method: "GET",
       success: (res) => {
+        console.log(res);
         let {
           message,
           meta

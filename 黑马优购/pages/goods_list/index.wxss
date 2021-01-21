@@ -1,0 +1,55 @@
+/* pages/goods_list/index.wxss */
+.TabTitle {
+  margin-top: 50px;
+  display: flex;
+  /* height: 30px; */
+}
+
+.TabTitle view {
+  display: flex;
+  flex: 1;
+  padding: 10px 0;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.current {
+  border-bottom: 2px solid #f2a5a7;
+  color: #f2a5a7;
+}
+
+/* 商品列表 */
+.commodity-box {
+  display: flex;
+  border-bottom: 2rpx solid #ccc;
+  padding: 25rpx 0;
+}
+
+.commodity-box-left {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.commodity-box-left image {
+  width: 70%;
+}
+
+.commodity-box-right {
+  padding-top: 10px;
+  flex: 3;
+}
+
+.commodity-box-right view {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: 20px;
+}
+
+.commodity-box-right text {
+  color: #cc0000;
+}

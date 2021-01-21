@@ -1,0 +1,28 @@
+<!--pages/goods_list/index.wxml-->
+<view class="container">
+  <!-- 搜索 -->
+  <Sreach></Sreach>
+
+  <!-- 分类 -->
+  <view class="TabTitle">
+    <view bindtap="handletitle" data-index='{{index}}'
+     wx:for-index='index'  class="{{index==currentIndex?'current':''}}"  wx:for="{{tabs}}" wx:key='id'>
+      {{item.title}}
+    </view>
+  </view>
+
+  <!-- 商品 -->
+  <view class='commodity'>
+    <view class="commodity-box" wx:for-item='item' wx:for="{{goodsList}}" wx:key='goods_id'>
+      <!-- 左 -->
+      <view class="commodity-box-left">
+       <image mode='widthFix' src="{{item.goods_big_logo}}"></image>
+      </view>
+      <!-- 右 -->
+      <view class="commodity-box-right">
+        <view>{{item.goods_name}}</view>
+        <text>￥{{item.goods_price}}</text>
+      </view>
+    </view>
+  </view>
+</view>

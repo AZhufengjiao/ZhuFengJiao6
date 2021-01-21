@@ -1,12 +1,14 @@
 {
   "pages": [
+
     "pages/cates/cates",
     "pages/index/index",
     "pages/logs/logs",
     "pages/search/search",
     "pages/cart/cart",
     "pages/me/me",
-    "components/Search"
+    "components/Search",
+    "pages/goods_list/index"
   ],
   "window": {
     "navigationBarTextStyle": "white",
